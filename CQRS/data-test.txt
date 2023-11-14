@@ -1,0 +1,12 @@
+{
+    "name": "The for agreements",
+    "description": "Personal improvement",
+    "price": 30
+}
+
+
+{
+    "name": "Fire your boss",
+    "description": "Personal improvement",
+    "price": 35
+}

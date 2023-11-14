@@ -1,0 +1,6 @@
+﻿Access key ID,Secret access key
+AKIA6MOESKCHO4TKIZHX,uBR0Y9OqPsXczn1GXAMyg1g4efwXn445uCHn4i5Z
+
+ssh ec2-user@54.81.87.134 -i dynamodb-ec22.pem
+
+us-east-1

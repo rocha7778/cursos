@@ -1,0 +1,18 @@
+mysql -h mysql.chvoggtptdsm.us-east-1.rds.amazonaws.com -P 3306 -u root -p
+
+
+#!/bin/bash  
+yum update -y
+yum install httpd -y
+echo "<html><body><h1>Hello Cloud Gurus 2</h1></body></html>" >/var/www/html/index.html
+systemctl start httpd
+systemctl enable httpd
+
+
+
+
+scp -i ec2-key.pem web-product.jar ec2-user@3.90.9.164:/home/ec2-user/
+scp -i product-server.pem web-product.jar ec2-user@52.55.106.15:/home/ec2-user/
+
+ssh -iproduct-server.pem ec2-user@52.55.106.15
+

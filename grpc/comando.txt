@@ -1,0 +1,1 @@
+protoc --protoc_path%PROTO_FOLDER_PATH% --plugin=protoc-gen-grpc-java=%PROTO_PLUGING_PATH% --grpc-java_out=%OUTPUT_DIR% --java_out=%OUTPUT_DIR% %PROTO_FOLDER_PATH%/employee.proto

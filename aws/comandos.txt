@@ -1,0 +1,1 @@
+ssh ec2-user@100.24.16.229 -i cloud-formation-key.pem

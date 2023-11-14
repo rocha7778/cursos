@@ -1,0 +1,11 @@
+aws dynamodb describe-table --table-name BaseballStats
+
+aws dynamodb batch-write-item  --request-items file://request-items.json  --return-consumed-capacity INDEXES --return-item-collection-metrics SIZE
+aws dynamodb batch-write-item --request-items file://./teams.json
+aws dynamodb scan --return-consumed-capacity "TOTAL" --table-name BaseballStats
+
+aws dynamodb query \
+    --table-name BaseballStats \
+    --key-condition-expression "TeamID = :v1" \
+    --expression-attribute-values file://expression-attributes.json \
+    --return-consumed-capacity TOTAL

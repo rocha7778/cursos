@@ -1,0 +1,25 @@
+minishift.exe start --vm-driver virtualbox --no-vtx-check
+
+docker-machine create -d virtualbox --virtualbox-memory=4096 --virtualbox-cpu-count=4 --virtualbox-disk-size=40960 --virtualbox-no-vtx-check default
+
+
+
+minishift.exe start --no-vtx-check
+
+kubectl get pods -w
+kubectl create ns miespacion --dry-run=client -o yaml
+
+
+kubectl exec --it  web-elixir bash
+
+kubectl exec -it  web-elixir bash [-n rocha]
+
+
+aws sts get-caller-identity
+
+curl --location 'http://localhost:8080/users'
+
+
+
+wathc -n1 kubectl get pods
+kubectl port-forward pod/web-elixir-deployment-6b7dd47964-2r6ws 8080:8080
